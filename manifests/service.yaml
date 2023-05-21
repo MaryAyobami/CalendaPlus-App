@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-resource-group: SCAProject
+  name: calendarfrontend
+spec:
+  loadBalancerIP: 20.253.165.62
+  type: LoadBalancer 
+  selector:
+    app: calendarfrontend
+  ports:
+    - protocol: TCP # The protocol the SERVICE will listen to
+      port: 80
+      targetPort: 80
+ 
+  

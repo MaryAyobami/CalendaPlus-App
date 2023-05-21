@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: calendarfrontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: calendarfrontend
+  template:
+    metadata:
+      labels:
+        app: calendarfrontend
+    spec:
+      containers:
+        - image: scaprojectregistry.azurecr.io/calendarfrontendimage:latest
+          name: calendarfrontendimage
+          ports:
+            - containerPort: 80
+        #   env:
+        #     - name: CALENDAR_APP_BACKEND_URL
+        #       value: http://calendarbackend.svc.cluster.local
+        #          - name: MY_POD_IP
+        #   valueFrom:
+        #     fieldRef:
+        #       fieldPath: status.podIP
+        # - name: APPLICATION_SERVER
+        #   value: "$(MY_POD_IP):8080"
