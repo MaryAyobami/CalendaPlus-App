@@ -3,6 +3,7 @@
 CalendaPlus is a cloud-based calendar web application developed using the MERN (MongoDB, Express, React, Node.js) stack, making it a robust and efficient solution for managing events and
 schedules. It provides functionality for creating, editing, deleting, and listing events. This application is a fork of the original project available [here](https://github.com/juanpmachadob/mern-calendar).
 
+![main app](./deployment_images/CalendaPlus.PNG)
   > # Table of Contents 
     1. Description
       - Frontend 
@@ -25,6 +26,10 @@ events, such as creating, updating, and deleting events, as well as retrieving e
 CalendaPlus uses Azure Cosmos DB for MongoDB as its database. Azure Cosmos DB is a globally distributed, multi-model database service
 provided by Microsoft. It offers high scalability, low latency, and automatic indexing of data. The backend is connected to the database
 using a connection string, allowing seamless communication between the application and the database.
+![cosnos db creation](./deployment_images/create-database.PNG)
+
+![cosmos db](./deployment_images/database-cosmosdb.PNG)
+*An image of the databse on the Azure portal*
 
 # Deployment 
 The frontend and backend of CalendaPlus are deployed on a single Kubernetes cluster using Azure Kubernetes Service (AKS). This
@@ -48,15 +53,21 @@ and managing Docker container images.
 The cluster consists of a node pool, with 3 nodes. AKS
 provides a managed Kubernetes environment, simplifying the deployment
 and management of containerized applications.
+![aks node pool ](./deployment_images/aks-nodepool.PNG)
+![aks nodes](./deployment_images/aks-nodes.PNG)
 
 - Azure Kubernetes Service was authorized to pull images from the Azure
 Container Registry. This allows the Kubernetes cluster to access the
 required Docker images for running the frontend and backend services.
+![aks-acr access](./deployment_images/aks-acr%20access.PNG)
+![aks-kubectl access](./deployment_images/aks-kubectl%20access.PNG)
 
 - The deployment and service files, located in the manifests folder, were
 used to deploy the container images to the Kubernetes cluster. These
 files define the desired state of the application and provide
 instructions for creating and managing the necessary resources.
+![running pods](./deployment_images/running-pods.PNG)
+*An image of the running pods*
 
 - To allow external services, such as web browsers, to access the backend
 service running on the Kubernetes pod (which has a ClusterIP service
@@ -64,7 +75,8 @@ type), Nginx was used as a reverse proxy server. Nginx directs API calls
 from the frontend application to the IP address of the pod running the
 backend container.
 
-
+*The Application*
+![calendar plus login](./deployment_images/CalendaPlus-login.PNG)
 # Accessing the Application 
 To access the CalendaPlus application, use the
 following URL: *http://20.237.201.39/*
