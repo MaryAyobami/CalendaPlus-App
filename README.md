@@ -49,10 +49,10 @@ and managing Docker container images.
 ![Frontend docker image](./deployment_images/build-frontendimage.PNG)
 ![Backend docker image](./deployment_images/build-backendimage.PNG)
 
-- A Kubernetes cluster was created using Azure Kubernetes Service (AKS).
-The cluster consists of a node pool, with 3 nodes. AKS
+- A Kubernetes cluster was created using Azure Kubernetes Service (AKS). AKS
 provides a managed Kubernetes environment, simplifying the deployment
 and management of containerized applications.
+The cluster consists of a node pool, with 3 nodes.(*Cluster Autoscaler was enable  to utomatically scale the cluster to meet application demands*) 
 ![aks node pool ](./deployment_images/aks-nodepool.PNG)
 ![aks nodes](./deployment_images/aks-nodes.PNG)
 
