@@ -29,6 +29,7 @@ using a connection string, allowing seamless communication between the applicati
 # Deployment 
 The frontend and backend of CalendaPlus are deployed on a single Kubernetes cluster using Azure Kubernetes Service (AKS). This
 cloud-native approach ensures high availability, scalability, and easy management of the application.
+![kubernetes cluster on Azure portal](./deployment_images/kub-cluster.PNG)
 
 #  Breakdown
 To deploy CalendaPlus, the following steps were performed:
@@ -40,6 +41,8 @@ and configurations to run the respective services.
 - The Docker images were pushed to the Azure Container Registry. Azure
 Container Registry is a private container registry that allows storing
 and managing Docker container images.
+![Frontend docker image](./deployment_images/build-frontendimage.PNG)
+![Backend docker image](./deployment_images/build-backendimage.PNG)
 
 - A Kubernetes cluster was created using Azure Kubernetes Service (AKS).
 The cluster consists of a node pool, with 3 nodes. AKS
