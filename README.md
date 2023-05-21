@@ -12,7 +12,7 @@ schedules. It provides functionality for creating, editing, deleting, and listin
       - Breakdown
     3. Accessing the Application 
 
-# Description {#desc}
+# Description 
 ## Frontend 
 The client-side (frontend) of the application is located in the client branch of this repository. It has been developed using React, a popular JavaScript
 library for building user interfaces. The frontend provides a user-friendly interface for interacting with the calendar and managing events.
