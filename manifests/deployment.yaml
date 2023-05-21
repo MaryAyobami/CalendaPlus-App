@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: calendarbackend
+  labels:
+    app: calendarbackend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: calendarbackend
+  template:
+    metadata:
+      labels:
+        app: calendarbackend
+    spec:
+      containers:
+        - name: calendarappimage
+          image: scaprojectregistry.azurecr.io/calendarappimage:latest
+          ports:
+            - containerPort: 5000
