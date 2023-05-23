@@ -34,6 +34,9 @@ using a connection string, allowing seamless communication between the applicati
 # Deployment 
 The frontend and backend of CalendaPlus are deployed on a single Kubernetes cluster using Azure Kubernetes Service (AKS). This
 cloud-native approach ensures high availability, scalability, and easy management of the application.
+> *The infrastructure diagram*
+  ![Infrastructure diagram](./deployment_images/calendarapp.png)
+  
 ![kubernetes cluster on Azure portal](./deployment_images/kub-cluster.PNG)
 
 #  Breakdown
