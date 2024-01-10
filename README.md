@@ -1,7 +1,7 @@
 # CalendaPlus
 
 CalendaPlus is a cloud-based calendar web application developed using the MERN (MongoDB, Express, React, Node.js) stack, making it a robust and efficient solution for managing events and
-schedules. It provides functionality for creating, editing, deleting, and listing events. This application is a fork of the original project available [here](https://github.com/juanpmachadob/mern-calendar).
+schedules. It provides functionality for creating, editing, deleting, and listing events. 
 
 ![main app](./deployment_images/CalendaPlus.PNG)
   > # Table of Contents 
